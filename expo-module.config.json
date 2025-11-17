@@ -1,0 +1,13 @@
+{
+    "platforms": ["apple", "android"],
+    "coreFeatures": ["swiftui", "compose"],
+    "apple": {
+      "modules": ["RTMPModule"]
+    },
+    "android": {
+      "modules": [
+        "expo.modules.rtmp.RTMPModule"
+      ]
+    }
+  }
+  

@@ -1,0 +1,16 @@
+example/
+src/
+tsconfig.json
+.github/
+node_modules/
+ios/build/
+android/build/
+*.log
+npm-debug.log
+yarn.lock
+expo/
+.vscode/
+.idea/
+*.iml
+dist/
+coverage/
