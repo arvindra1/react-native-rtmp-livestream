@@ -1,32 +1,36 @@
 {
-    "name": "react-native-rtmp-livestream",
-    "version": "1.0.0",
-    "description": "RTMP live streaming module for React Native & Expo (Expo Module API)",
-    "main": "build/index.js",
-    "types": "build/index.d.ts",
-    "source": "src/index.ts",
-  
-    "files": [
-      "src",
-      "build",
-      "android",
-      "ios",
-      "plugin.js",
-      "*.podspec"
-    ],
-  
-    "expo": {
-      "autolinking": {
-        "ios": {
-          "modules": ["RTMPLiveStreamModule"]
-        },
-        "android": {
-          "modules": ["video.api.expo.rtmp.RTMPLiveStreamModule"]
-        }
+  "name": "react-native-rtmp-livestream",
+  "version": "1.0.0",
+  "description": "RTMP live streaming module for React Native & Expo (Expo Module API)",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "src",
+    "build",
+    "android",
+    "ios",
+    "plugin.js",
+    "*.podspec"
+  ],
+  "expo": {
+    "autolinking": {
+      "ios": {
+        "modules": [
+          "RTMPLiveStreamModule"
+        ]
       },
-      "plugins": ["./plugin"]
+      "android": {
+        "modules": [
+          "video.api.expo.rtmp.RTMPLiveStreamModule"
+        ]
+      }
     },
-    "scripts": {
+    "plugins": [
+      "./plugin"
+    ]
+  },
+  "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
     "lint": "expo-module lint",
@@ -35,7 +39,6 @@
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module"
   },
-  
   "devDependencies": {
     "@types/react": "~19.1.10",
     "expo-module-scripts": "^5.0.7"
@@ -43,40 +46,44 @@
   "peerDependencies": {
     "expo": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-web": "*"
   },
-  
-    "engines": {
-      "node": ">=18"
-    },
-  
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org/",
-        "access": "public"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/arvindra1/react-native-rtmp-livestream.git"
-      },
-      "keywords": [
-        "react-native",
-        "expo",
-        "rtmp",
-        "livestream",
-        "camera",
-        "video-stream"
-      ],
-      "author": "Arvindra",
-      "license": "MIT",
-    "eslintConfig": {
-      "root": true,
-      "extends": ["expo-module-scripts/eslint"],
-      "rules": {}
-    },
-  
-    "prettier": {
-      "singleQuote": true,
-      "trailingComma": "es5"
+  "peerDependenciesMeta": {
+    "react-native-web": {
+      "optional": true
     }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arvindra1/react-native-rtmp-livestream.git"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "rtmp",
+    "livestream",
+    "camera",
+    "video-stream"
+  ],
+  "author": "Arvindra",
+  "license": "MIT",
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "expo-module-scripts/eslint"
+    ],
+    "rules": {}
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
-  
+}

@@ -1,4 +1,4 @@
-package video.api.reactnative.livestream
+package video.api.expo.livestream
 
 import android.view.View
 import com.facebook.react.bridge.ReadableArray
